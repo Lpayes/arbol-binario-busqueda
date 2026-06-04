@@ -344,6 +344,27 @@ public class ArbolBinarioBusqueda {
                 && esBalanceadoRecursivo(nodo.derecho);
     }
     
+    //Problema 3
+    public boolean esBSTValido() {
+        return esBSTValidoRecursivo(raiz, null, null);
+    }
+
+    private boolean esBSTValidoRecursivo(Nodo nodo, Integer minimo, Integer maximo) {
+        if (nodo == null) {
+            return true;
+        }
+
+        if (minimo != null && nodo.dato <= minimo) {
+            return false;
+        }
+
+        if (maximo != null && nodo.dato >= maximo) {
+            return false;
+        }
+
+        return esBSTValidoRecursivo(nodo.izquierdo, minimo, nodo.dato)
+                && esBSTValidoRecursivo(nodo.derecho, nodo.dato, maximo);
+    }
 
     // ============================================================
     // COLA INTERNA (lista enlazada simple) usada para BFS.

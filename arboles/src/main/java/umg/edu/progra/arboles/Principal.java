@@ -51,6 +51,25 @@ public class Principal {
 
         System.out.println("Arbol desbalanceado balanceado?: " + arbolDesbalanceado.esBalanceado());
         
+        
+        //Problema 3
+        
+        System.out.println("\n--- Problema 3: Validar BST ---");
+        System.out.println("Arbol principal es BST valido?: " + arbol.esBSTValido());
+
+        ArbolBinarioBusqueda arbolRoto = new ArbolBinarioBusqueda();
+
+        arbolRoto.insertar(50);
+        arbolRoto.insertar(30);
+        arbolRoto.insertar(70);
+
+        arbolRoto.getRaiz().izquierdo.dato = 100;
+
+        System.out.println("\nArbol roto manualmente:");
+        arbolRoto.imprimirArbol();
+
+        System.out.println("Arbol roto es BST valido?: " + arbolRoto.esBSTValido());
+        
      
         System.out.println("Altura:  " + arbol.altura());
         System.out.println("Minimo:  " + arbol.minimo());
