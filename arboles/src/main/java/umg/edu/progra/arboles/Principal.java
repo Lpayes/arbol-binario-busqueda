@@ -148,6 +148,21 @@ public class Principal {
         System.out.print("InOrden despues: ");
         arbolInvertido.inOrden();
         
+        System.out.println("\n--- Extras E1, E2 y E3 ---");
+
+        System.out.print("Arbol en InOrden: ");
+        arbol.inOrden();
+
+        System.out.println("E1 - kEsimoMenor(1): " + arbol.kEsimoMenor(1));
+        System.out.println("E1 - kEsimoMenor(3): " + arbol.kEsimoMenor(3));
+        System.out.println("E1 - kEsimoMenor(5): " + arbol.kEsimoMenor(5));
+        System.out.println("E1 - kEsimoMenor(8): " + arbol.kEsimoMenor(8));
+
+        System.out.print("E2 - Rango [20, 60]: ");
+        arbol.imprimirRangoOrdenado(20, 60);
+
+        System.out.println("E3 - Diametro del arbol: " + arbol.diametro());
+        
         System.out.println("\n--- Eliminacion ---");
         System.out.println("Eliminando 20 (nodo con 1 hijo)...");
         arbol.eliminar(20);
