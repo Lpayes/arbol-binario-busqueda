@@ -301,6 +301,23 @@ public class ArbolBinarioBusqueda {
         System.out.println("-> " + nodo.dato);
         imprimirArbolRecursivo(nodo.izquierdo, nivel + 1);
     }
+    
+    //Problema 1
+    
+    public int contarNodos() {
+        return contarNodosRecursivo(raiz);
+    }
+
+    private int contarNodosRecursivo(Nodo nodo) {
+
+        if (nodo == null) {
+            return 0;
+        }
+
+        return 1
+                + contarNodosRecursivo(nodo.izquierdo)
+                + contarNodosRecursivo(nodo.derecho);
+    }
 
     // ============================================================
     // COLA INTERNA (lista enlazada simple) usada para BFS.
